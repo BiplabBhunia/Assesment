@@ -1,0 +1,37 @@
+<div class="contract-container">
+    <div class="contract-header">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
+        <h2>Service Agreement Contract</h2>
+    </div>
+
+    <div class="contract-body">
+        <p class="date">Date: <span id="currentDate"></span></p>
+        
+        <h3>Terms and Conditions</h3>
+        
+        <div class="terms">
+            <p>1. <strong>Services:</strong> The Company agrees to provide services as outlined in the attached Statement of Work.</p>
+            
+            <p>2. <strong>Payment:</strong> Payment terms shall be net 30 days from the date of invoice.</p>
+            
+            <p>3. <strong>Term:</strong> This agreement shall commence on the date of signing and continue for a period of 12 months.</p>
+            
+            <p>4. <strong>Confidentiality:</strong> Both parties agree to maintain the confidentiality of any proprietary information shared during the course of this agreement.</p>
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-field">
+                <p>Client Signature:</p>
+                <div class="signature-placeholder"></div>
+                <p class="signature-date">Date: _____________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contract-actions">
+        <form action="{{ url_for('main.sign') }}" method="post">
+            <button type="submit" class="btn-sign">Sign Contract</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
